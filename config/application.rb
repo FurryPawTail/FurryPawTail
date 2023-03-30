@@ -18,5 +18,10 @@ module FurryPawTail
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Rubocop-rails for rails generators
+    config.generators.after_generate do |files|
+      system("bundle exec rubocop -A --fail-level=E #{files.shelljoin}", exception: true)
+    end
   end
 end
