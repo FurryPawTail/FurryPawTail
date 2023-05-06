@@ -72,6 +72,8 @@ group :development do
   gem 'rubocop-rails', '~> 2.18', require: false
   gem 'rubocop-rspec', '~> 2.19', require: false
 
+  gem 'brakeman', '~> 5.4', '>= 5.4.1'
+
   gem 'overcommit', '~> 0.60.0'
 end
 
