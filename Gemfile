@@ -68,9 +68,9 @@ group :development do
   # gem "spring"
 
   gem 'rubocop', '~> 1.48', require: false
+  gem 'rubocop-performance', '~> 1.17', '>= 1.17.1', require: false
   gem 'rubocop-rails', '~> 2.18', require: false
   gem 'rubocop-rspec', '~> 2.19', require: false
-  gem 'rubocop-performance', '~> 1.17', '>= 1.17.1', require: false
 end
 
 group :test do
