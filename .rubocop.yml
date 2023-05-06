@@ -1,4 +1,38 @@
-require: 
-  - rubocop
-  - rubocop-rails
+require:
   - rubocop-rspec
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1.2
+  DisplayCopNames: true
+  SuggestExtensions: false
+  Exclude:
+    - vendor/ruby/**/*
+    - node_modules/**/*
+    - .licenses/**/*
+    - db/migrate/**
+    - db/seeds.rb
+    - lib/devise/models/validatable.rb
+    - 'bin/**/*'
+Rails:
+  Enabled: true
+Metrics/BlockLength:
+  Exclude:
+    - config/routes.rb
+    - db/migrate/*
+    - config/environments/*
+    - lib/tasks/**/*
+    - spec/**/*
+    - config/routes.rb
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+Style/Documentation:
+  Enabled: false
+Style/FormatStringToken:
+  Enabled: false
+Style/HashSyntax:
+  Enabled: false
+RSpec/EmptyExampleGroup:
+  Enabled: false
