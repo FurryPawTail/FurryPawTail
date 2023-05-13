@@ -74,6 +74,8 @@ group :development do
 
   gem 'brakeman', '~> 5.4', '>= 5.4.1'
 
+  gem 'bullet', '~> 7.0', '>= 7.0.7'
+
   gem 'overcommit', '~> 0.60.0'
 end
 
