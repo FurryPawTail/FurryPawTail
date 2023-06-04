@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'homepage/index'
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  root 'homepage#index'
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  namespace :admin do
+    root to: 'home#index'
+  end
 end
