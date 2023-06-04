@@ -1,0 +1,7 @@
+<h1>毛孩汪汪喵喵嘰嘰喳喳</h1>
+<div>
+  <%= current_user.first_name %>
+  <%= current_user.last_name %>
+  <%= current_user.email %>
+  <%= link_to '登出', destroy_user_session_path, data: { turbo_method: :delete } %>
+</div>
