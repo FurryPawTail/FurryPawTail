@@ -27,6 +27,9 @@ Metrics/BlockLength:
     - lib/tasks/**/*
     - spec/**/*
     - config/routes.rb
+Layout/LineLength:
+  Exclude:
+    - config/initializers/devise.rb
 Metrics/ParameterLists:
   CountKeywordArgs: false
 Style/Documentation:
@@ -37,3 +40,4 @@ Style/HashSyntax:
   Enabled: false
 RSpec/EmptyExampleGroup:
   Enabled: false
+
