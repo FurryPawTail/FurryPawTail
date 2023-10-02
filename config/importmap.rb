@@ -1,3 +1,4 @@
+# TODO: This file is not sure if it is needed. Keep it for now and remove it until we are sure it is not needed.
 # frozen_string_literal: true
 
 # Pin npm packages by running ./bin/importmap

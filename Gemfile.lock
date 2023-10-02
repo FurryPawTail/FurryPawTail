@@ -252,6 +252,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    smart_todo (1.6.0)
+      rexml
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -317,6 +319,7 @@ DEPENDENCIES
   rubocop-rails (~> 2.18)
   rubocop-rspec (~> 2.19)
   selenium-webdriver
+  smart_todo
   sprockets-rails
   stimulus-rails
   turbo-rails
