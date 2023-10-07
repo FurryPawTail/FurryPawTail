@@ -30450,21 +30450,21 @@
   application.debug = false;
   window.Stimulus = application;
 
-  // app/javascript/controllers/hello_controller.js
+  // app/javascript/controllers/hello_controller.ts
   var hello_controller_default = class extends Controller {
     connect() {
       this.element.textContent = "Hello World!";
     }
   };
 
-  // app/javascript/controllers/index.js
+  // app/javascript/controllers/index.ts
   application.register("hello", hello_controller_default);
 
-  // app/javascript/components/index.jsx
+  // app/javascript/components/index.tsx
   var import_react4 = __toESM(require_react());
   var import_client = __toESM(require_client());
 
-  // app/javascript/components/App.jsx
+  // app/javascript/components/App.tsx
   var import_react3 = __toESM(require_react());
 
   // app/javascript/routes/index.jsx
@@ -32262,7 +32262,7 @@
     }, [callback, capture]);
   }
 
-  // app/javascript/components/Home.jsx
+  // app/javascript/components/Home.tsx
   var import_react = __toESM(require_react());
   var Home_default = () => /* @__PURE__ */ import_react.default.createElement("div", { className: "vw-100 vh-100 primary-color d-flex align-items-center justify-content-center" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "jumbotron jumbotron-fluid bg-transparent" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "container secondary-color" }, /* @__PURE__ */ import_react.default.createElement("h1", { className: "display-4" }, "Food Recipes"), /* @__PURE__ */ import_react.default.createElement("p", { className: "lead" }, "A curated list of recipes for the best homemade meal and delicacies."), /* @__PURE__ */ import_react.default.createElement("hr", { className: "my-4" }), /* @__PURE__ */ import_react.default.createElement(
     Link,
@@ -32277,10 +32277,10 @@
   // app/javascript/routes/index.jsx
   var routes_default = /* @__PURE__ */ import_react2.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react2.default.createElement(Routes, null, /* @__PURE__ */ import_react2.default.createElement(Route, { path: "/", element: /* @__PURE__ */ import_react2.default.createElement(Home_default, null) })));
 
-  // app/javascript/components/App.jsx
+  // app/javascript/components/App.tsx
   var App_default = (props) => /* @__PURE__ */ import_react3.default.createElement(import_react3.default.Fragment, null, routes_default);
 
-  // app/javascript/components/index.jsx
+  // app/javascript/components/index.tsx
   document.addEventListener("turbo:load", () => {
     const root = (0, import_client.createRoot)(
       document.body.appendChild(document.createElement("div"))
