@@ -16,7 +16,8 @@
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --external:@hotwired/stimulus,@hotwired/stimulus-loading",
-    "build:css": "tailwindcss -i app/assets/stylesheets/application.scss -o app/assets/builds/application.css"
+    "build:css": "tailwindcss -i app/assets/stylesheets/application.scss -o app/assets/builds/application.css",
+    "lint": "eslint app/javascript/**/* --fix"
   },
   "devDependencies": {
     "@types/react": "^18.2.25",
