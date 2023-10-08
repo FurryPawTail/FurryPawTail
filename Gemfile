@@ -89,3 +89,4 @@ group :test do
 end
 
 gem 'devise', '~> 4.9', '>= 4.9.2', require: false
+gem "jsonapi-serializer"
