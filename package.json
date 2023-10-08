@@ -16,10 +16,15 @@
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --external:@hotwired/stimulus,@hotwired/stimulus-loading",
-    "build:css": "tailwindcss -i app/assets/stylesheets/application.scss -o app/assets/builds/application.css"
+    "build:css": "tailwindcss -i app/assets/stylesheets/application.scss -o app/assets/builds/application.css",
+    "lint": "eslint app/javascript/**/* --fix"
   },
   "devDependencies": {
     "@types/react": "^18.2.25",
-    "@types/react-dom": "^18.2.11"
+    "@types/react-dom": "^18.2.11",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.51.0",
+    "eslint-plugin-react": "^7.33.2"
   }
 }
