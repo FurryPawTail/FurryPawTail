@@ -2,13 +2,12 @@
 
 module Users
   class RegistrationsController < Devise::RegistrationsController
+    # skip_before_action :verify_authenticity_token
+    respond_to :json
     # before_action :configure_sign_up_params, only: [:create]
     # before_action :configure_account_update_params, only: [:update]
 
-    # GET /resource/sign_up
-    # def new
-    #   super
-    # end
+    def new; end
 
     # POST /resource
     # def create
@@ -32,17 +31,26 @@ module Users
 
     private
 
-    def birthday
-      year = params.dig('user', 'birthday(1i)')
-      month = params.dig('user', 'birthday(2i)')
-      date = params.dig('user', 'birthday(3i)')
-
-      [['birthday', "#{year}-#{month}-#{date}"]].to_h
+    def respond_with(resource, _opts = {})
+      if resource.persisted?
+        render json: { status: { code: 200, message: 'Signed up sucessfully.' },
+                       data: UserSerializer.new(resource).serializable_hash[:data][:attributes] 
+                      }
+      else
+        render json: { status: { code: 422, message: resource.errors.full_messages.join(' ') } }
+      end
     end
 
+    # def birthday
+    #   year = params.dig('user', 'birthday(1i)')
+    #   month = params.dig('user', 'birthday(2i)')
+    #   date = params.dig('user', 'birthday(3i)')
+
+    #   [['birthday', "#{year}-#{month}-#{date}"]].to_h
+    # end
+
     def sign_up_params
-      params.require(:user).permit(%i[first_name last_name identity_number gender email password
-                                      password_confirmation]).merge(birthday)
+      params.require(:user).permit(%i[first_name last_name identity_number gender email password password_confirmation birthday])
     end
 
     # GET /resource/cancel
