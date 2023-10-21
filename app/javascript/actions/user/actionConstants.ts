@@ -1,0 +1,9 @@
+export const SIGNUP_USER = "SIGNUP_USER"
+
+export const USER_SUCCESS = "USER_SUCCESS"
+export const USER_ERRORS = "USER_ERRORS"
+export const USER_FAILURE = "USER_FAILURE"
+
+export const SIGN_IN_SUCCESS = "SIGN_IN_SUCCESS"
+export const SIGN_IN_ERRORS = "SIGN_IN_ERRORS"
+export const SIGN_IN_FAILURE = "SIGN_IN_FAILURE"
