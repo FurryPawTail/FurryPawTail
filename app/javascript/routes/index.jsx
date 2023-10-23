@@ -1,11 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "../components/Home";
+import Signup from "../components/user/registrations/Signup";
+import Dashboard from "../components/Dashboard";
+import NavigationBar from "../components/NavigationBar";
 
 export default (
-  <Router>
+  <div>
+    <NavigationBar />
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path={'/'} element={<Dashboard />} />
+      <Route path={'/signup/sign_up'} element={<Signup />} />
     </Routes>
-  </Router>
+  </div>
+  
+
 );
